@@ -6,7 +6,7 @@ import QabilPdfDocument from './document';
 export async function GET() {
   try {
     const buffer = await renderToBuffer(createElement(QabilPdfDocument));
-    return new NextResponse(buffer, {
+    return new NextResponse(new Uint8Array(buffer), {
       headers: {
         'Content-Type': 'application/pdf',
         'Content-Disposition': 'attachment; filename="Qabil-Company-Profile.pdf"',
