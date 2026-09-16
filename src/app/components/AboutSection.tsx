@@ -41,25 +41,11 @@ export default function AboutSection() {
               className="relative rounded-3xl overflow-hidden shadow-xl h-full min-h-[520px]"
             >
               <Image
-                src="/story.png"
+                src="/shop.png"
                 alt="Qabil Plumbing Solutions Story"
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-5 py-3">
-                  <div
-                    className="text-white font-bold text-sm"
-                    style={{ fontFamily: 'var(--font-playfair-display)' }}
-                  >
-                    Qabil Plumbing Solutions
-                  </div>
-                  <div className="text-white/60 text-xs mt-0.5 uppercase tracking-widest">
-                    Est. 1975 · Karachi, Pakistan
-                  </div>
-                </div>
-              </div>
             </motion.div>
           </div>
 

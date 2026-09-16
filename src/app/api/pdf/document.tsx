@@ -178,7 +178,9 @@ export default function QabilPdfDocument() {
           <LogoHeader />
           <View style={styles.content}>
             <View style={styles.catHeader}>
-              <Text style={styles.catLabel}>{cat.parent}</Text>
+              {cat.parent !== 'Basic Bathroom Needs' && (
+                <Text style={styles.catLabel}>{cat.parent}</Text>
+              )}
               <Text style={styles.catTitle}>{cat.title} {cat.titleHighlight}</Text>
               <Text style={styles.catDesc}>{cat.description}</Text>
             </View>
@@ -186,7 +188,6 @@ export default function QabilPdfDocument() {
               {cat.products.map((p, i) => (
                 <View key={i} style={styles.productCard}>
                   {p.image && <Image src={p.image} style={styles.productImage} />}
-                  {'code' in p && p.code && <Text style={styles.productCode}>{p.code}</Text>}
                   <Text style={styles.productName}>{p.name}</Text>
                   <Text style={styles.productMaterial}>{p.material}</Text>
                   {'size' in p && p.size && <Text style={styles.productSize}>{p.size}</Text>}

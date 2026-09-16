@@ -1,27 +1,21 @@
 const PRODUCTS = [
   {
     name: 'Floor Drain',
-    code: 'QFD08',
     material: 'St. Steel 304 Grade',
     size: '6" × 6"',
     tag: 'Best Seller',
-    note: '*Various other designs available',
   },
   {
     name: 'Single Lever Basin Mixer',
-    code: '—',
     material: 'Brass (CP Finish)',
     size: 'Standard',
     tag: 'Premium',
-    note: '*Various designs & colors available',
   },
   {
     name: 'Handle Valve',
-    code: '—',
     material: 'Brass Body + SS 304 Handle',
     size: '½" to 2"',
     tag: 'Industrial Grade',
-    note: '*Also available in ¾", 1", 1¼", 1½"',
   },
 ];
 
@@ -63,10 +57,8 @@ export default function FeaturedProductsSection() {
                 </div>
 
                 <div className="space-y-1 text-xs text-gray-500 mb-4">
-                  {p.code !== '—' && <div><span className="font-medium text-gray-700">Item Code:</span> {p.code}</div>}
                   <div><span className="font-medium text-gray-700">Material:</span> {p.material}</div>
                   <div><span className="font-medium text-gray-700">Size:</span> {p.size}</div>
-                  <div className="text-gray-400 italic mt-2">{p.note}</div>
                 </div>
 
                 <button className="w-full border border-[#28166F] text-[#28166F] text-xs font-semibold py-2 rounded hover:bg-[#28166F] hover:text-white transition-colors cursor-pointer">

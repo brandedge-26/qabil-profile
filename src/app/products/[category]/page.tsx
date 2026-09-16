@@ -14,7 +14,6 @@ import {
   Star,
   Award,
   Handshake,
-  FileText,
 } from "lucide-react";
 import { getCategoryBySlug, getAllSlugs } from "../../data/products";
 
@@ -48,12 +47,6 @@ export default async function CategoryPage({
   if (!category) {
     notFound();
   }
-
-  // Collect all unique notes across products
-  const notes = category.products
-    .map((p) => p.note)
-    .filter((n): n is string => Boolean(n))
-    .filter((n, i, arr) => arr.indexOf(n) === i);
 
   return (
     <div className="min-h-screen bg-white font-[var(--font-jakarta)]">
@@ -109,9 +102,11 @@ export default async function CategoryPage({
           {/* Left Panel */}
           <div className="lg:w-[45%] bg-white p-10 lg:p-16 flex flex-col justify-center">
             {/* Parent Label Pill */}
-            <span className="inline-block self-start bg-[#28166F] text-white text-[10px] uppercase tracking-widest px-3 py-1 rounded-full mb-6">
-              {category.parent}
-            </span>
+            {category.parent !== 'Basic Bathroom Needs' && (
+              <span className="inline-block self-start bg-[#28166F] text-white text-[10px] uppercase tracking-widest px-3 py-1 rounded-full mb-6">
+                {category.parent}
+              </span>
+            )}
 
             {/* Title */}
             <h1 className="text-4xl lg:text-5xl font-black leading-tight mb-5">
@@ -191,11 +186,6 @@ export default async function CategoryPage({
 
               {/* Product Info */}
               <div className="flex flex-col flex-1">
-                {product.code && (
-                  <span className="text-[10px] text-gray-400 uppercase tracking-widest mb-1">
-                    Code: {product.code}
-                  </span>
-                )}
                 <h3 className="font-bold text-gray-900 text-sm mb-1">
                   {product.name}
                 </h3>
@@ -217,27 +207,6 @@ export default async function CategoryPage({
             </div>
           ))}
         </div>
-
-        {/* Notes Box */}
-        {notes.length > 0 && (
-          <div className="mt-10 bg-gray-50 border border-gray-100 rounded-xl p-6 flex items-start gap-4">
-            <div className="flex-shrink-0 w-9 h-9 rounded-full bg-[#28166F]/10 flex items-center justify-center mt-0.5">
-              <FileText size={16} className="text-[#28166F]" />
-            </div>
-            <div>
-              <p className="text-xs font-bold uppercase text-gray-500 tracking-wider mb-2">
-                Product Notes
-              </p>
-              <ul className="flex flex-col gap-1">
-                {notes.map((note) => (
-                  <li key={note} className="text-sm text-gray-500">
-                    {note}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        )}
       </section>
 
       {/* ── Years Banner ── */}

@@ -9,7 +9,6 @@ import { CATEGORIES } from '../data/products';
 function CategorySection({ category, index }: { category: (typeof CATEGORIES)[0]; index: number }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.05 });
-  const hasNotes = category.products.some((p) => p.note);
 
   return (
     <motion.div
@@ -22,9 +21,11 @@ function CategorySection({ category, index }: { category: (typeof CATEGORIES)[0]
       {/* Category header */}
       <div className="flex flex-col sm:flex-row sm:items-end gap-4 mb-6 pb-4 border-b border-gray-200">
         <div className="flex-1">
-          <span className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold bg-gray-100 px-2.5 py-1 rounded-full">
-            {category.parent}
-          </span>
+          {category.parent !== 'Basic Bathroom Needs' && (
+            <span className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold bg-gray-100 px-2.5 py-1 rounded-full">
+              {category.parent}
+            </span>
+          )}
           <h3
             className="text-2xl font-bold text-[#111827] mt-2"
             style={{ fontFamily: 'var(--font-playfair-display)' }}
@@ -81,11 +82,6 @@ function CategorySection({ category, index }: { category: (typeof CATEGORIES)[0]
 
             {/* Info */}
             <div className="p-4">
-              {product.code && (
-                <div className="text-[10px] text-gray-400 uppercase tracking-widest mb-1">
-                  {product.code}
-                </div>
-              )}
               <h4 className="font-bold text-sm text-[#111827] mb-1 leading-snug">
                 {product.name}
               </h4>
@@ -98,20 +94,6 @@ function CategorySection({ category, index }: { category: (typeof CATEGORIES)[0]
           </motion.div>
         ))}
       </div>
-
-      {/* Notes */}
-      {hasNotes && (
-        <div className="mt-5 flex flex-wrap gap-3">
-          {category.products
-            .filter((p) => p.note)
-            .map((p, i) => (
-              <div key={i} className="flex items-center gap-2 bg-white border border-[#28166F]/15 rounded-full px-4 py-2">
-                <span className="w-1 h-1 rounded-full bg-[#28166F]/40 shrink-0" />
-                <span className="text-xs text-gray-500">{p.note?.replace(/^\*/, '')}</span>
-              </div>
-            ))}
-        </div>
-      )}
     </motion.div>
   );
 }

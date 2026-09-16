@@ -1,10 +1,8 @@
 export interface Product {
   name: string;
-  code?: string;
   material: string;
   size?: string;
   description: string;
-  note?: string;
   image?: string;
 }
 
@@ -35,21 +33,17 @@ export const CATEGORIES: Category[] = [
     products: [
       {
         name: "Floor Drain",
-        code: "QFD08",
         material: "St. Steel 304 Grade",
         size: '6"×6"',
         description: "Standard round floor drain with 304 grade stainless steel construction.",
-        note: "*Various other designs available",
         image: "/products/floor-drain/Floor Drain.jpg",
       },
       {
         name: "Floor Drain (Tile Insert)",
-        code: "QFD33",
         material: "St. Steel 304 Grade",
         size: '6"×6"',
         description: "Square tile insert drain for seamless bathroom floor integration.",
-        note: "*Various other designs available",
-        image: "/products/floor-drain/Floor Drain (Tile Insert).jpg",
+        image: "/products/floor-drain/floordraintileinsert.png",
       },
     ],
   },
@@ -71,7 +65,6 @@ export const CATEGORIES: Category[] = [
         name: "Bolt Kits",
         material: "SS 304 Grade Rods & Brass Nuts",
         description: "High-strength bolt kits for secure basin fixing.",
-        note: "*Various other options available",
         image: "/products/basin fittings/Bolt kits.jpg",
       },
       {
@@ -86,16 +79,13 @@ export const CATEGORIES: Category[] = [
         material: "Brass",
         size: '1¼" & 1½"',
         description: "Standard basin waste fittings in durable brass.",
-        note: "*Various other types available",
         image: "/products/basin fittings/Basin Waster.jpg",
       },
       {
         name: "Basin Wastes",
-        code: "QBW05",
         material: "Brass",
         size: '1¼" & 1½"',
         description: "Premium pop-up basin waste with smooth operation.",
-        note: "*Various other types available",
         image: "/products/basin fittings/Basin Waster (2).jpg",
       },
     ],
@@ -119,7 +109,6 @@ export const CATEGORIES: Category[] = [
         material: "Plastic (Battery Grade)",
         size: '5"×4"',
         description: "Flexible commode connectors for secure toilet installation.",
-        note: "*Other types available",
         image: "/products/commode and wc fitting/Commode Connectors.jpg",
       },
       {
@@ -141,7 +130,6 @@ export const CATEGORIES: Category[] = [
         material: "PVC",
         size: "1 meter S. Steel chain",
         description: "PVC toilet shower with high-quality stainless steel chain.",
-        note: "*Colors: all basic colors and chrome available",
         image: "/products/commode and wc fitting/Toilet Showers.jpg",
       },
     ],
@@ -165,7 +153,6 @@ export const CATEGORIES: Category[] = [
         material: "Brass, Chrome Plated",
         size: '½" thread MxF, Lengths: 1"-1½"-2"-3"-4"-6"',
         description: "Extension nipples for flexible reach in tight plumbing spaces.",
-        note: "*Various other thread sizes available",
         image: "/products/cp joinded fiting/Extension CP Nipple.jpg",
       },
       {
@@ -173,7 +160,6 @@ export const CATEGORIES: Category[] = [
         material: "Brass, Chrome Plated",
         size: '½" threads',
         description: "T-joint and other joined fittings in polished chrome brass.",
-        note: "*Various other options available",
         image: "/products/cp joinded fiting/CP Joined Fitting.jpg",
       },
     ],
@@ -226,42 +212,36 @@ export const CATEGORIES: Category[] = [
         name: "Single Lever Bath Mixers",
         material: "Brass",
         description: "Sleek design with smooth operation and long-lasting chrome finish.",
-        note: "*Various other designs and color options available",
         image: "/products/CP Bathroom fittings & accessorice/Single Lever Bath Mixers.jpg",
       },
       {
         name: "Single Lever Basin Mixers",
         material: "Brass",
         description: "Modern elegance with precision control and durable performance.",
-        note: "*Various other designs and color options available",
         image: "/products/CP Bathroom fittings & accessorice/Single Lever Basin Mixers.jpg",
       },
       {
         name: "Kitchen Mixers Counter Mount",
         material: "Brass",
         description: "Functional design for everyday convenience and reliability.",
-        note: "*Various other designs available",
         image: "/products/CP Bathroom fittings & accessorice/Kitchen Mixers Counter Mount.jpg",
       },
       {
         name: "Kitchen Mixers Wall Mount",
         material: "Brass",
         description: "Space-saving wall mount design for modern kitchens.",
-        note: "*Various other designs available",
         image: "/products/CP Bathroom fittings & accessorice/Kitchen Mixers Wall Mount.jpg",
       },
       {
         name: "Bib Taps",
         material: "Brass",
         description: "Classic bib taps in solid brass with chrome plating.",
-        note: "*Various other designs available",
         image: "/products/CP Bathroom fittings & accessorice/Bib Taps.jpg",
       },
       {
         name: "Bathroom Accessories",
         material: "Stainless Steel",
         description: "Complete range of bathroom accessories in stainless steel.",
-        note: "*Various other designs available",
         image: "/products/CP Bathroom fittings & accessorice/Bathroom Accessories.jpg",
       },
     ],

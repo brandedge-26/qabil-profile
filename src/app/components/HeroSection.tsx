@@ -150,23 +150,6 @@ export default function HeroSection() {
                 </div>
               </div>
 
-              {/* Bottom-right floating stat card */}
-              <div className="absolute bottom-8 right-8 bg-[#28166F] rounded-2xl px-5 py-3 shadow-lg z-10">
-                <div
-                  className="text-white font-bold text-sm"
-                  style={{ fontFamily: 'var(--font-playfair-display)' }}
-                >
-                  1975 · Est.
-                </div>
-                <div className="text-white/70 text-[10px] mt-0.5 uppercase tracking-widest">
-                  Karachi, Pakistan
-                </div>
-              </div>
-
-              {/* Bottom-left accent */}
-              <div className="absolute bottom-8 left-8 bg-[#28166F] rounded-full w-10 h-10 flex items-center justify-center shadow-md z-10">
-                <div className="text-white text-[10px] font-bold">50+</div>
-              </div>
             </div>
           </motion.div>
 

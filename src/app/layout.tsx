@@ -18,7 +18,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Qabil Engineering Works | Premium Sanitary Fittings Since 1975",
+  title: "Qabil Brothers",
   description:
     "Since its establishment in 1975, Qabil Engineering Works has emerged as an industry trailblazer, pioneering innovation and setting a benchmark for manufacturing excellence in the field of sanitary fittings. Proudly manufacturing premium brass, stainless steel, and PVC sanitary products from Karachi, Pakistan.",
 };
