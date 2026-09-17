@@ -97,23 +97,17 @@ export const CATEGORIES: Category[] = [
     titleHighlight: "WC Fittings",
     description:
       "Reliable commode and WC fittings built for easy installation and long-lasting performance.",
-    features: [
-      "PURE PVC MATERIAL",
-      "SOFT PUSH BUTTON",
-      "6-12L ADJUSTABLE FILL",
-      "EASY INSTALLATION",
-    ],
+    features: [],
     products: [
       {
         name: "Commode Connectors",
-        material: "Plastic (Battery Grade)",
-        size: '5"×4"',
+        material: "Polypropylene Copolymer",
         description: "Flexible commode connectors for secure toilet installation.",
         image: "/products/commode and wc fitting/Commode Connectors.jpg",
       },
       {
         name: "Flush Tank",
-        material: "Pure PVC",
+        material: "PVC Only",
         size: "6-12 Liters",
         description: "Pure PVC flush tank with soft push button and adjustable fill.",
         image: "/products/commode and wc fitting/Flush Tank.jpg",
@@ -121,7 +115,7 @@ export const CATEGORIES: Category[] = [
       {
         name: "Chain Connections",
         material: "S. Steel 304Grade & Nuts in Brass (CP)",
-        size: '18" and 24"',
+        size: '18", 20", 24" and 36"',
         description: "Stainless steel chain connections for reliable flush operation.",
         image: "/products/commode and wc fitting/Chain Connections.jpg",
       },

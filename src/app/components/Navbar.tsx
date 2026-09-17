@@ -60,8 +60,8 @@ export default function Navbar() {
         {/* Right actions — desktop */}
         <div className="hidden lg:flex items-center gap-3">
           <a
-            href="/api/pdf"
-            download="Qabil-Company-Profile.pdf"
+            href="/pdf/Qabil-Profile.pdf"
+            download="Qabil-Profile.pdf"
             className="border border-[#28166F] text-[#28166F] text-sm px-4 py-2 rounded-full hover:bg-[#28166F] hover:text-white transition-all duration-200 font-medium"
           >
             Download PDF
@@ -102,8 +102,8 @@ export default function Navbar() {
           ))}
           <div className="flex items-center gap-3 pt-2 border-t border-gray-100">
             <a
-              href="/Company Profile 25.pdf"
-              download
+              href="/pdf/Qabil-Profile.pdf"
+              download="Qabil-Profile.pdf"
               className="border border-[#28166F] text-[#28166F] text-sm px-4 py-2 rounded-full hover:bg-[#28166F] hover:text-white transition-all font-medium"
             >
               Download PDF

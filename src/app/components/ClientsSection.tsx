@@ -4,64 +4,64 @@ import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 
 const HOSPITALS = [
-  'Agha Khan University & Hospital',
-  'Liaquat National Hospital',
-  'Memon Medical Institute',
   'Kiran Hospital',
-  'Tabba Hearts Hospital',
-  'DOW University Hospital',
   'SIUT Trust Hospital',
+  'Tabba Hearts Hospital',
+  'Memon Medical Institute',
+  'DOW University Hospital',
+  'Liaquat National Hospital',
   'Karachi Hospital (Nazimabad)',
+  'Agha Khan University & Hospital',
 ];
 
-const GOVT = ['Sindh Assembly', 'Indus Rangers'];
+const GOVT = ['Indus Rangers', 'Sindh Assembly'];
 
 const EDUCATIONAL = [
-  'Aga Khan Education Services',
+  'BVS Parsi School',
   "Generation's School",
   'DHA Suffa University',
-  'BVS Parsi School',
   'United Nations Schools',
+  'Aga Khan Education Services',
 ];
 
 const PRIVATE = [
-  'Regent Plaza Hotel',
+  'Dolmen Malls',
   'Meezan Bank HO',
+  'Lucky One Mall',
+  'Youngs (pvt) Ltd',
+  'Regent Plaza Hotel',
+  'Sami Pharmaceuticals',
   'Swiss Pharmaceuticals',
   'Bosch Pharmaceuticals',
-  'Sami Pharmaceuticals',
-  'Youngs (pvt) Ltd',
-  'Dolmen Malls',
-  'Lucky One Mall',
 ];
 
 const BUILDERS = [
-  'Dolmen (Pvt) Ltd',
+  'Tai Builders',
+  'Euro Builders',
+  'Aman Builders',
+  'ZKB Engineers',
   'Lucky Landmark',
   'Machyara Group',
-  'Chapal Builders',
-  'Ali Lakhani Builders',
   'Saima Builders',
-  "King's Builders",
-  'Tai Builders',
   'Karim Builders',
   'Maymar Housing',
   'Roomi Builders',
+  'Chapal Builders',
+  "King's Builders",
   'Sumair Builders',
+  'Dolmen (Pvt) Ltd',
   'Lakhani Builders',
-  'Al-Ghafoor Builders',
-  'Euro Builders',
   'Central Builders',
   'Diamond Builders',
-  'Aman Builders',
+  'Al-Ghafoor Builders',
   'Imtiaz Construction',
-  'ZKB Engineers',
+  'Ali Lakhani Builders',
 ];
 
 function ClientPill({ name, variant = 'default' }: { name: string; variant?: 'default' | 'brand' }) {
   return (
     <div
-      className={`text-sm font-medium rounded-full px-4 py-2 ${
+      className={`text-sm font-medium rounded-full px-4 py-2 whitespace-nowrap ${
         variant === 'brand'
           ? 'bg-[#28166F]/5 border border-[#28166F]/15 text-[#28166F]'
           : 'bg-[#F7F8FA] border border-gray-100 text-gray-700'
@@ -96,7 +96,7 @@ function SubSection({
         <span className="w-2.5 h-2.5 rounded-full bg-[#28166F] inline-block" />
         {title}
       </h3>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+      <div className="flex flex-wrap gap-2">
         {items.map((name) => (
           <ClientPill key={name} name={name} variant={variant} />
         ))}
@@ -156,7 +156,7 @@ export default function ClientsSection() {
             Qabil has been the preferred sanitary fitting partner for some of Pakistan&apos;s most reputed
             builders and real estate developers, delivering quality for large-scale residential and commercial projects.
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+          <div className="flex flex-wrap gap-2">
             {BUILDERS.map((name) => (
               <ClientPill key={name} name={name} variant="brand" />
             ))}

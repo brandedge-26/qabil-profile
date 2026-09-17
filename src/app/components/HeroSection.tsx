@@ -77,8 +77,8 @@ export default function HeroSection() {
             <FadeLeft delay={0.5}>
               <div className="flex flex-wrap gap-4 mt-8">
                 <a
-                  href="/api/pdf"
-                  download="Qabil-Company-Profile.pdf"
+                  href="/pdf/Qabil-Profile.pdf"
+                  download="Qabil-Profile.pdf"
                   className="bg-[#111827] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#28166F] transition-all duration-300 text-sm"
                 >
                   Download Company Profile
@@ -94,22 +94,22 @@ export default function HeroSection() {
 
             {/* Stats */}
             <FadeLeft delay={0.65}>
-              <div className="flex flex-wrap items-center gap-0 mt-12 pt-8 border-t border-gray-200">
+              <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-start sm:items-center gap-x-6 gap-y-6 sm:gap-0 mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-gray-200">
                 {STATS.map((stat, i) => (
                   <div key={stat.label} className="flex items-center">
-                    <div className="text-center px-5 first:pl-0">
+                    <div className="sm:text-center sm:px-5 sm:first:pl-0">
                       <div
-                        className="text-2xl font-bold text-[#28166F]"
+                        className="text-xl sm:text-2xl font-bold text-[#28166F]"
                         style={{ fontFamily: 'var(--font-playfair-display)' }}
                       >
                         {stat.num}
                       </div>
-                      <div className="text-xs text-gray-500 mt-1 uppercase tracking-wider">
+                      <div className="text-[11px] sm:text-xs text-gray-500 mt-1 uppercase tracking-wider">
                         {stat.label}
                       </div>
                     </div>
                     {i < STATS.length - 1 && (
-                      <div className="w-px h-8 bg-gray-200 mx-1" />
+                      <div className="hidden sm:block w-px h-8 bg-gray-200 mx-1" />
                     )}
                   </div>
                 ))}
