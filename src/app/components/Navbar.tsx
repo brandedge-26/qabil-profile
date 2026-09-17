@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, MessageCircle } from 'lucide-react';
 
 const NAV_LINKS = [
@@ -28,7 +29,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white shadow-sm' : 'bg-transparent'
+        scrolled ? 'bg-white border-b border-gray-200' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -88,38 +89,48 @@ export default function Navbar() {
       </div>
 
       {/* Mobile dropdown */}
-      {mobileOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-100 shadow-md px-6 py-4 flex flex-col gap-4">
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              onClick={() => setMobileOpen(false)}
-              className="text-sm font-medium text-gray-700 hover:text-[#28166F] transition-colors py-1"
-            >
-              {link.label}
-            </a>
-          ))}
-          <div className="flex items-center gap-3 pt-2 border-t border-gray-100">
-            <a
-              href="/pdf/Qabil-Profile.pdf"
-              download="Qabil-Profile.pdf"
-              className="border border-[#28166F] text-[#28166F] text-sm px-4 py-2 rounded-full hover:bg-[#28166F] hover:text-white transition-all font-medium"
-            >
-              Download PDF
-            </a>
-            <a
-              href="https://wa.me/923041114566"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center w-9 h-9 rounded-full bg-green-500 text-white hover:bg-green-600 transition-colors"
-              aria-label="WhatsApp"
-            >
-              <MessageCircle size={17} />
-            </a>
-          </div>
-        </div>
-      )}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25, ease: 'easeInOut' }}
+            className="lg:hidden bg-white border-t border-gray-100 border-b border-gray-200 overflow-hidden"
+          >
+            <div className="px-6 py-4 flex flex-col gap-4">
+              {NAV_LINKS.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="text-sm font-medium text-gray-700 hover:text-[#28166F] transition-colors py-1"
+                >
+                  {link.label}
+                </a>
+              ))}
+              <div className="flex items-center gap-3 pt-2 border-t border-gray-100">
+                <a
+                  href="/pdf/Qabil-Profile.pdf"
+                  download="Qabil-Profile.pdf"
+                  className="border border-[#28166F] text-[#28166F] text-sm px-4 py-2 rounded-full hover:bg-[#28166F] hover:text-white transition-all font-medium"
+                >
+                  Download PDF
+                </a>
+                <a
+                  href="https://wa.me/923041114566"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center w-9 h-9 rounded-full bg-green-500 text-white hover:bg-green-600 transition-colors"
+                  aria-label="WhatsApp"
+                >
+                  <MessageCircle size={17} />
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

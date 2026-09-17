@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar';
+import FloatingDownloadButton from './components/FloatingDownloadButton';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
 import ValuesSection from './components/ValuesSection';
@@ -13,6 +14,7 @@ export default function Home() {
   return (
     <main>
       <Navbar />
+      <FloatingDownloadButton />
       <HeroSection />
       <AboutSection />
       <ValuesSection />
