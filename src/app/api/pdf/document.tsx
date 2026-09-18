@@ -104,7 +104,7 @@ const PRIVATE = ['Regent Plaza Hotel', 'Meezan Bank HO', 'Swiss Pharmaceuticals'
 const BUILDERS = ['Dolmen (Pvt) Ltd', 'Lucky Landmark', 'Machyara Group', 'Chapal Builders', 'Ali Lakhani Builders', 'Saima Builders', "King's Builders", 'Tai Builders', 'Karim Builders', 'Maymar Housing', 'Roomi Builders', 'Sumair Builders', 'Lakhani Builders', 'Al-Ghafoor Builders', 'Euro Builders', 'Central Builders', 'Diamond Builders', 'Aman Builders', 'Imtiaz Construction', 'ZKB Engineers'];
 
 const OUTLETS = [
-  { name: 'Head Office', city: 'DHA Karachi', address: 'Plot No 2-C, Mezzanine Floor, Street No 8, Khayaban-e-Jami Phase VII, DHA Karachi.', phone: '92-21-35314218' },
+  { name: 'Head Office', city: 'Karachi', address: 'Office No 1201, 12th Floor, Roshan Trade Center, Shaheed-e-Millat Rd, Bahadurabad BYJCHS, Karachi.', phone: '021-34124865' },
   { name: 'Sales Outlet', city: 'Gulbahar', address: 'Plot 1096/A, Shop No 2 & 3, Gulbahar Colony No 1.', phone: '92-21-36684190' },
   { name: 'Sales Outlet', city: 'Stadium Road', address: 'Shop No 5, Salwa Arcade, Stadium Road, Overseas C.H.S. Society.', phone: '92-21-34924865' },
   { name: 'Sales Outlet', city: 'D.H.A.', address: 'Plot No 36-C, Lane No 11, Bukhari Commercial, Phase VI DHA.', phone: '92-21-35841242' },

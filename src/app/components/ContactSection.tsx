@@ -7,10 +7,10 @@ import { Phone, Mail, Globe, MapPin } from 'lucide-react';
 const OUTLETS = [
   {
     name: 'Head Office',
-    location: 'DHA Karachi',
-    address: 'Plot No 2-C, Mezzanine Floor, Street No 8, Khayaban-e-Jami Phase VII, DHA Karachi.',
-    phone: '92-21-35314218',
-    tel: '+922135314218',
+    location: 'Karachi',
+    address: 'Office No 1201, 12th Floor, Roshan Trade Center, Shaheed-e-Millat Rd, Bahadurabad BYJCHS, Karachi.',
+    phone: '021-34124865',
+    tel: '+922134124865',
     highlight: true,
   },
   {

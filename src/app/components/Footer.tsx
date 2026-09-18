@@ -12,18 +12,18 @@ const QUICK_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0a0a0a] text-white py-10">
+    <footer className="bg-[#28166F] text-white py-10">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pb-8 border-b border-white/10">
 
           {/* Column 1 — Logo */}
           <div className="flex flex-col gap-4">
             <Image
-              src="/qabil-logo.png"
+              src="/whitelogo.png"
               alt="Qabil Engineering Works"
               width={120}
               height={60}
-              className="object-contain brightness-0 invert"
+              className="object-contain"
             />
             <p className="text-white/40 text-xs leading-relaxed max-w-xs">
               Premium sanitary fittings manufacturer based in Karachi, Pakistan. Trusted since 1975.
@@ -117,6 +117,17 @@ export default function Footer() {
         <div className="pt-5 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-white/30 text-xs">
             © 2025 Qabil Engineering Works. All rights reserved.
+          </p>
+          <p className="text-white/30 text-xs">
+            Developed by{' '}
+            <a
+              href="https://brandedgecreations.pk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/50 font-semibold hover:text-white transition-colors"
+            >
+              BrandEdge Creations
+            </a>
           </p>
           <p className="text-white/20 text-xs">
             Manufactured in Karachi, Pakistan
