@@ -5,10 +5,31 @@ import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
 
 const TIMELINE = [
-  { year: '1975', title: 'Founded', desc: 'Qabil Engineering Works established in Karachi, Pakistan.' },
-  { year: '1990', title: 'City Expansion', desc: 'Extended distribution to major cities across Pakistan.' },
-  { year: '2005', title: 'CP Fittings Range', desc: 'Introduced a comprehensive chrome-plated fittings product line.' },
-  { year: '2024', title: 'Nationwide Network', desc: 'Established a robust nationwide dealer and outlet network.' },
+  {
+    year: '1963',
+    title: 'A Legacy Begins',
+    desc: 'Chairman Mr. Abid Hussain undertook major city development projects and supplied to the Army and Government sectors. Alongside these ventures, he established expertise in the manufacturing of a diverse range of sanitary and plumbing products.',
+  },
+  {
+    year: '1975',
+    title: 'Qabil Engineering Works Established',
+    desc: "Qabil Engineering Works was established in Karachi, marking a significant milestone in the company's journey. The company pioneered the manufacturing of a wide range of plumbing products, laying the foundation for its growing industry presence.",
+  },
+  {
+    year: '1990',
+    title: 'Product Portfolio Expansion',
+    desc: 'Qabil expanded its product portfolio in response to evolving market requirements and emerging industry trends. The focus remained on introducing modern products with superior quality, durability, and reliable performance.',
+  },
+  {
+    year: '2010',
+    title: 'Nationwide Distribution',
+    desc: 'Qabil expanded its distribution network through company-operated outlets and authorized dealerships across major cities of Pakistan.',
+  },
+  {
+    year: '2025',
+    title: 'A Trusted Industry Name',
+    desc: 'With decades of experience, quality maintain and a continually evolving product portfolio, Qabil further strengthened its position within the sanitary and plumbing industry.',
+  },
 ];
 
 function FadeUp({ children, delay = 0, isInView }: { children: React.ReactNode; delay?: number; isInView: boolean }) {
@@ -59,24 +80,14 @@ export default function AboutSection() {
                 className="text-4xl lg:text-5xl font-bold text-[#111827] mt-2 leading-tight"
                 style={{ fontFamily: 'var(--font-playfair-display)' }}
               >
-                Five Decades of
+                Six Decades of
                 <br />
                 <span className="text-[#28166F]">Plumbing Excellence</span>
               </h2>
             </FadeUp>
 
-            <FadeUp delay={0.2} isInView={isInView}>
-              <p className="text-gray-500 mt-5 leading-relaxed text-base">
-                Since its establishment in 1975, Qabil Engineering Works has emerged as an industry trailblazer,
-                pioneering innovation and setting a benchmark for manufacturing excellence in the field of sanitary
-                fittings. Our journey has been marked by a relentless commitment to crafting high-quality products
-                that not only meet but exceed the evolving needs of our customers — blending functionality with
-                a touch of opulence.
-              </p>
-            </FadeUp>
-
             {/* Timeline */}
-            <FadeUp delay={0.3} isInView={isInView}>
+            <FadeUp delay={0.2} isInView={isInView}>
               <div className="mt-8 flex flex-col gap-5">
                 {TIMELINE.map((item) => (
                   <div key={item.year} className="flex items-start gap-4">

@@ -77,8 +77,8 @@ export default function HeroSection() {
             <FadeLeft delay={0.5}>
               <div className="flex flex-wrap gap-4 mt-8">
                 <a
-                  href="/pdf/Qabil-Profile.pdf"
-                  download="Qabil-Profile.pdf"
+                  href="/pdf/Qabil-Updated-Profile.pdf"
+                  download="Qabil-Updated-Profile.pdf"
                   className="bg-[#111827] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#28166F] transition-all duration-300 text-sm"
                 >
                   Download Company Profile
