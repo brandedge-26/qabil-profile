@@ -34,8 +34,8 @@ export default function FloatingDownloadButton() {
             className="flex items-center gap-3 bg-white border-t border-gray-200 shadow-lg px-4 py-3"
           >
             <a
-              href="/pdf/Qabil-Updated-Profile.pdf"
-              download="Qabil-Updated-Profile.pdf"
+              href="/pdf/Qabil_New_Profile.pdf"
+              download="Qabil_New_Profile.pdf"
               className="flex-1 flex items-center justify-center gap-2 bg-[#28166F] text-white text-sm font-semibold py-3 rounded-full"
             >
               <Download size={16} />
